@@ -4,6 +4,17 @@ from tkinter import *
 root= Tk()
 root.geometry("290x258")
 
+# Values for the all game fields
+bx1 = "1"
+bx2 = "2"
+bx3 = "3"
+bx4 = "4"
+bx5 = "5"
+bx6 = "6"
+bx7 = "7"
+bx8 = "8"
+bx9 = "9"
+
 # Buttons for all game fields
 button1 = Button(root, text = "  ",command = lambda: activate(1))
 button1.grid(row='0',column="0",ipadx="40",ipady="30")
@@ -23,5 +34,16 @@ button8 = Button(root, text = "  ",command = lambda: activate(8))
 button8.grid(row='2',column="1",ipadx="40",ipady="30")
 button9 = Button(root, text = "  ",command = lambda: activate(9))
 button9.grid(row='2',column="2",ipadx="40",ipady="30")
+
+# Main game logic function and needed variables
+player = 1
+def activate(box):
+    global player
+    global bx1
+    if box == 1 and player == 1:
+        button1.config(text="O")
+        player = 2
+        bx1="O"
+
 
 root.mainloop()
