@@ -16,6 +16,7 @@ bx6 = "6"
 bx7 = "7"
 bx8 = "8"
 bx9 = "9"
+nonEmptyFields = 0
 
 # Buttons for all game fields
 button1 = Button(root, text = "  ",command = lambda: activate(1))
@@ -50,6 +51,9 @@ def activate(box):
     global bx7
     global bx8
     global bx9
+    global nonEmptyFields
+
+    nonEmptyFields = nonEmptyFields +1
     if box == 1 and player == 1:
         button1.config(text="O")
         player = 2
@@ -153,4 +157,8 @@ def activate(box):
         messagebox._show("Game end", "player: " + player + " wins")
         exit(0)
 
+# Condition for the draw
+    elif nonEmptyFields == 9:
+        messagebox._show("Game end", "Draw")
+        exit(0)
 root.mainloop()
