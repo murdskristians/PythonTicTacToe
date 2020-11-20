@@ -1,4 +1,6 @@
+# I have no idea why next line did not import all, but I had to import messagebox seperatelly to work
 from tkinter import *
+from tkinter import messagebox
 
 # Main frame for imported library
 root= Tk()
@@ -120,5 +122,16 @@ def activate(box):
         button9.config(text="X")
         player =1
         bx9="X"
+
+# Winning condition - Rows
+    if bx1 == bx2 == bx3 =="O" or bx4 == bx5 == bx6 =="O" or bx7 == bx8 == bx9 =="O":
+        player = "O"
+        messagebox._show("Game end", "player: " + player + " wins")
+        exit(0)
+    elif bx1 == bx2 == bx3 =="X" or bx4 == bx5 == bx6 =="X" or bx7 == bx8 == bx9 =="X":
+        player = "X"
+        messagebox._show("Game end", "player: " + player + " wins")
+        exit(0)
+
 
 root.mainloop()
