@@ -133,5 +133,24 @@ def activate(box):
         messagebox._show("Game end", "player: " + player + " wins")
         exit(0)
 
+# Winning condition - Columns
+    elif bx1 == bx4 == bx7 =="O" or bx2 == bx5 == bx8 =="O" or bx3 == bx6 == bx9 =="O":
+        player = "O"
+        messagebox._show("Game end", "player: " + player + " wins")
+        exit(0)
+    elif bx1 == bx4 == bx7 =="X" or bx2 == bx5 == bx8 =="X" or bx3 == bx6 == bx9 =="X":
+        player = "X"
+        messagebox._show("Game end", "player: " + player + " wins")
+        exit(0)
+
+# Winning condition - Diagonals
+    elif bx1 == bx5 == bx9 =="O" or bx3 == bx5 == bx7 =="O":
+        player = "O"
+        messagebox._show("Game end", "player: " + player + " wins")
+        exit(0)
+    elif bx1 == bx5 == bx9 =="X" or bx3 == bx5 == bx7 =="X":
+        player = "X"
+        messagebox._show("Game end", "player: " + player + " wins")
+        exit(0)
 
 root.mainloop()
