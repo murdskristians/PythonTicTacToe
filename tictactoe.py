@@ -52,80 +52,114 @@ def activate(box):
     global bx8
     global bx9
     global nonEmptyFields
-
-    nonEmptyFields = nonEmptyFields +1
-    if box == 1 and player == 1:
+    
+    if box == 1 and player == 1 and bx1=="1":
         button1.config(text="O")
         player = 2
         bx1="O"
-    elif box == 1 and player == 2:
+        nonEmptyFields = nonEmptyFields + 1
+
+    elif box == 1 and player == 2 and bx1=="1":
         button1.config(text="X")
-        player =1
+        player = 1
         bx1="X"
-    elif box == 2 and player == 1:
+        nonEmptyFields = nonEmptyFields +1
+
+    elif box == 2 and player == 1 and bx2=="2":
         button2.config(text="O")
         player = 2
         bx2="O"
-    elif box == 2 and player == 2:
+        nonEmptyFields = nonEmptyFields +1
+
+    elif box == 2 and player == 2 and bx2=="2":
         button2.config(text="X")
-        player =1
+        player = 1
         bx2="X"
-    elif box == 3 and player == 1:
+        nonEmptyFields = nonEmptyFields +1
+
+    elif box == 3 and player == 1 and bx3=="3":
         button3.config(text="O")
         player = 2
         bx3="O"
-    elif box == 3 and player == 2:
+        nonEmptyFields = nonEmptyFields +1
+
+    elif box == 3 and player == 2 and bx3=="3":
         button3.config(text="X")
-        player =1
+        player = 1
         bx3="X"
-    elif box == 4 and player == 1:
+        nonEmptyFields = nonEmptyFields +1
+
+    elif box == 4 and player == 1 and bx4=="4":
         button4.config(text="O")
         player = 2
         bx4="O"
-    elif box == 4 and player == 2:
+        nonEmptyFields = nonEmptyFields +1
+
+    elif box == 4 and player == 2 and bx4=="4":
         button4.config(text="X")
-        player =1
+        player = 1
         bx4="X"
-    elif box == 5 and player == 1:
+        nonEmptyFields = nonEmptyFields +1
+
+    elif box == 5 and player == 1 and bx5=="5":
         button5.config(text="O")
         player = 2
         bx5="O"
-    elif box == 5 and player == 2:
+        nonEmptyFields = nonEmptyFields +1
+
+    elif box == 5 and player == 2 and bx5=="5":
         button5.config(text="X")
-        player =1
+        player = 1
         bx5="X"
-    elif box == 6 and player == 1:
+        nonEmptyFields = nonEmptyFields +1
+
+    elif box == 6 and player == 1 and bx6=="6":
         button6.config(text="O")
         player = 2
         bx6="O"
-    elif box == 6 and player == 2:
+        nonEmptyFields = nonEmptyFields +1
+
+    elif box == 6 and player == 2 and bx6=="6":
         button6.config(text="X")
-        player =1
+        player = 1
         bx6="X"
-    elif box == 7 and player == 1:
+        nonEmptyFields = nonEmptyFields +1
+
+    elif box == 7 and player == 1 and bx7=="7":
         button7.config(text="O")
         player = 2
         bx7="O"
-    elif box == 7 and player == 2:
+        nonEmptyFields = nonEmptyFields +1
+
+    elif box == 7 and player == 2 and bx7=="7":
         button7.config(text="X")
-        player =1
+        player = 1
         bx7="X"
-    elif box == 8 and player == 1:
+        nonEmptyFields = nonEmptyFields +1
+
+    elif box == 8 and player == 1 and bx8=="8":
         button8.config(text="O")
         player = 2
         bx8="O"
-    elif box == 8 and player == 2:
+        nonEmptyFields = nonEmptyFields +1
+
+    elif box == 8 and player == 2 and bx8=="8":
         button8.config(text="X")
-        player =1
+        player = 1
         bx8="X"
-    elif box == 9 and player == 1:
+        nonEmptyFields = nonEmptyFields +1
+
+    elif box == 9 and player == 1 and bx9=="9":
         button9.config(text="O")
         player = 2
         bx9="O"
-    elif box == 9 and player == 2:
+        nonEmptyFields = nonEmptyFields +1
+
+    elif box == 9 and player == 2 and bx9=="9":
         button9.config(text="X")
-        player =1
+        player = 1
         bx9="X"
+        nonEmptyFields = nonEmptyFields +1
 
 # Winning condition - Rows
     if bx1 == bx2 == bx3 =="O" or bx4 == bx5 == bx6 =="O" or bx7 == bx8 == bx9 =="O":
